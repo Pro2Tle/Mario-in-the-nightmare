@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="7556895236607083">
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" sid="6607551833605331" type="player">
+                    <param id="0" name="Object">box</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-2</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="6550553573300092" type="player">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">box.Y</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="178721883327531" type="box">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1424311859355229" type="box">
+                    <param id="0" name="Object">extra</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="7296878951192042" type="box">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">extra</param>
+                </action>
+                <action id="-10" name="Set value" sid="525162709973559" type="extra">
+                    <param id="0" name="Instance variable">new_y</param>
+                    <param id="1" name="Value">box.Y-64</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="5182662280067992" type="box">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7336554933525809">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6860841825068724" type="box">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5316612830896218" type="box">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7398468732972512">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="4444199847189539" type="extra">
+                    <param id="0" name="Comparison">1</param>
+                    <param id="1" name="Y co-ordinate">extra.new_y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="9934735618954277" type="extra">
+                    <param id="0" name="Y">extra.Y-4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2103367593313871">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6061477988415121" type="extra">
+                    <param id="0" name="Object">player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7311477590557013" type="extra" />
+            </actions>
+        </event-block>
+        <event-block sid="4220194499116175">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3565060986125453" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="6926721058012536" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9334592875599651">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5716660309224553" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7346481096380569" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2811408011944101">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="2330933675610764" type="player">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">WindowHeight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="5157210922750702" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
